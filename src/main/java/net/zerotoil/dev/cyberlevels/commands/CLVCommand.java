@@ -130,7 +130,6 @@ public class CLVCommand implements CommandExecutor {
                     if (noPlayerPerm(player, "admin.levels.exp.add")) return true;
                     if (notDouble(player, args[1])) return true;
                     main.levelCache().playerLevels().get(target).addExp(Math.abs(Double.parseDouble(args[1])), main.levelCache().doCommandMultiplier());
-                    main.langUtils().sendMessage(player, target,"added-exp", true, true, new String[]{"{addedEXP}"}, new String[]{args[1]});
                     return true;
 
                 case "setexp":
